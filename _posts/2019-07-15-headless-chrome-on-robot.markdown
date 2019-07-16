@@ -10,8 +10,8 @@ After some time, I was working with Azure Devops and running my tests without do
 {% highlight robotframework %}
 *** Settings ***
 Documentation     This example demonstrates how to use current library
-Library      Selenium2Library
-Library      XvfbRobot
+Library           Selenium2Library
+Library           XvfbRobot
 
 *** Test Cases ***
 Create Headless Browser
