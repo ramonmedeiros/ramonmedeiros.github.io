@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Exploratory Tests: record user journey with Hotjar"
+description:  "Exploratory Tests: record user journey with Hotjar"
 date:   2019-07-17 13:01:12 +0200
-categories: jekyll update
+categories: hotjar user journey
 ---
 Since I joined this client, had the lucky to talk with a guy that is officially our PO, but also work doing some Growth Hacking and User Journey Specialist. He is one of this guys that love to analyse data from users, measure and propose changes. 
 

@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Sprunge: good utility to copy&paste from remote machines"
+description:  "Sprunge: good utility to copy&paste from remote machines"
 date:   2019-07-16 13:01:12 +0200
-categories: jekyll update
+categories: sprunge
 ---
 This week I had a problem with Azure Devops, specifically with the Microsoft hosted-agents. They offer a lot of OS, but poor resources to debug them. I was trying to take a screenshot, but they only offer this with [MSTest framework][mstest].
 

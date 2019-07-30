@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "How to easily send files inside your network with python"
+description:  "How to easily send files inside your network with python"
 date:   2019-07-18 12:01:12 +0200
-categories: jekyll update
+categories: python http-serve
 ---
 Today I was trying to send a file inside my network, but was too lazy to download and updated it to any storage service (GDrive, Dropbox). Then I realized that python offers you a [HTTP server][http] in one line command. So here is my tip:
 
