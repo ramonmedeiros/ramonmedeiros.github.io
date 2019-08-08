@@ -17,7 +17,7 @@ title: Ramon Medeiros Blog
 description: >- # this means to ignore newlines until "baseurl:"
     Sharing my experience in backend, automated testing and software engineering
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ramonmedeiros.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ramonmedeiros.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ramonmedeiros
 author: Ramon Medeiros
 # Build settings
@@ -28,7 +28,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Google Analytics
 google_site_verification: eXWJxxYyK9LgkYvr0JxNvqfovuz2xm-Ot9lsxzQgknk
+google_analytics: UA-144618823-1
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
