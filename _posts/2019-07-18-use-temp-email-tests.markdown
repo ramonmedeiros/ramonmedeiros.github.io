@@ -3,7 +3,9 @@ layout: post
 title:  "Temp-mail.org: Use temporary email in your tests"
 description:  "Temp-mail.org: Use temporary email in your tests"
 date:   2019-07-18 12:01:12 +0200
-categories: temp-mail testing
+keywords:
+  - temp-mail
+  - testing
 ---
 
 Sometimes, the software you are using needs to add the email verification. My teammates just recommended me [https://temp-mail.org][temp], which creates a temporary address and an inbox, perfect to make this quick tests. 

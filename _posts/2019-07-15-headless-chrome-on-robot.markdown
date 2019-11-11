@@ -3,7 +3,10 @@ layout: post
 title:  "Use webdriver headless support instead xvfb hack"
 description: "Use webdriver headless support instead xvfb hack"
 date:   2019-07-15 10:30:15 +0200
-categories: webdriver xvfb headless chrome
+keywords:
+  - webdriver
+  - xvfb
+  - headless-chrome
 ---
 When I started using selenium and UI testing tools, my first experience with headless browsers was with docker, by using [selenium/standalone-chrome][chrome-docker] image, which is very easy to use, since gives a running selenium with all deps.
 After some time, I was working with Azure Devops and running my tests without docker, directly with webdriver (chromedriver and safaridriver, in my case). To avoid issues with the agent, I was using XVFB to generate a new window and run the tests there. It's a pretty simple code:

@@ -3,7 +3,7 @@ layout: post
 title:  "How to record your screen while doing E2E tests"
 description:  "How to record your screen while doing E2E tests"
 date:   2019-10-17 14:02:15 +0200
-categories: ui-tests
+keywords: ui-tests
 ---
 
 So, as you write your tests and set it to run in your CI tool, sometimes only reading the log is quite difficult to understand what is going on, especially if you are not the one that wrote those tests.

@@ -3,7 +3,12 @@ layout: post
 title:  "Set up a Kafka test environment"
 description:  "Set up a Kafka test environment"
 date:   2019-08-07 12:11:15 +0200
-categories: kafka docker zookeper consumer publisher
+keywords:
+  - kafka
+  - docker
+  - zookeper
+  - consumer
+  - publisher
 ---
 
 This week I started to write some code to be processed by Kafka, but as I have heard before, set up this environment is usually trouble. So I just figure it out that [Spotify][kafka-github] has made a single docker image with Kafka and Zookeper. You just need to download and run. Usually, most of the images are only Kafka, so you need to bring both Kafka and AZookeper with docker-compose. Just a little bit more config, but this one was so confortable for my case.
