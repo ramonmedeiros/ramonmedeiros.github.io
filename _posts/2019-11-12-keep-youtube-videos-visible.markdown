@@ -21,8 +21,15 @@ Watching a video and want to keep it in your screen, so you can even change page
 document.querySelector('video').requestPictureInPicture()
 {% endhighlight %}
 
+OR
+
+install the [Chrome Extension for PictureInPicture][ext]
+
 ![Screenshot](http://i.imgur.com/0Jla53t.jpg)
 
+
+
+[ext]: https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg?hl=en
 
 
 
