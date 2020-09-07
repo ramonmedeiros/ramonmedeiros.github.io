@@ -29,9 +29,10 @@ Unfortunately, I wasn't able to mock `boto3` entirely, but I can mock the `clien
 # test.py
 from unittest.mock import patch
 
-@patch("script.boto3")
+@patch("boto3.client")
 def test_boto(boto3):
     import script
+    assert isinstance(script.client, MagicMock)
     
 {% endhighlight %}
 
