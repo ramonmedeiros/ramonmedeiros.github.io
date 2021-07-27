@@ -13,16 +13,7 @@ Main technologies that I work:
 
 Side-projects:
 
-* [Uno Project][uno]: building a web Uno game. Inspired on project [PokerNow][poker] by [https://github.com/samuelsimoes][samuel]
-* [Kimchi Project][kimchi]: HTML5 UI to manage KVM guests
-
-
-
-Studying:
-
-* Machine Learning: Finished FreeCodeCamp [ML course][freeCodeCamp] and doing [Google ML Crash Course][googleML]
-* Security: Doing [HackerOne CTF 101][ctf]
-
+* [Cheap Stocks][cheapstocks]: tool to help investors to stock pick cheap stocks based on value 
 
 
 
@@ -33,7 +24,7 @@ This blog uses [jekyll][jekyll-organization]
 
 [jekyll-organization]: https://github.com/jekyll
 [voi]: https://www.voiscooters.com/
-[uno]: https://github.com/uno-project
+[cheapstocks]: https://cheapstocks.app
 [poker]: https://www.pokernow.club/
 [samuel]: https://github.com/samuelsimoes
 [kimchi]: https://github.com/kimchi-project
