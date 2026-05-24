@@ -1,0 +1,45 @@
+# Ramon Medeiros
+
+> Software Engineer specializing in backend development, automated testing, and cloud infrastructure.
+
+Ramon Medeiros is a Software Engineer who writes about practical engineering problems at ramonmedeiros.dev. His work covers backend development with Golang and Python, Kubernetes, automated testing strategies, and cloud infrastructure on AWS and Google Cloud Platform.
+
+## Expertise
+
+- Backend development: Golang, Python, JavaScript
+- Container orchestration: Kubernetes, Docker
+- Cloud platforms: AWS (Lambda, API Gateway, SSM, S3), Google Cloud Platform (Cloud Storage, Identity-Aware Proxy)
+- Automated testing: Selenium, Robot Framework, Python unittest and mocking, API mocking with AWS API Gateway
+- Message streaming: Apache Kafka
+- CI/CD: Azure DevOps
+- Security: CTF competitions, binary exploitation, printf format string vulnerabilities
+
+## Side Projects
+
+- [Cheap Stocks](https://cheapstocks.app): a stock screening tool that helps value investors identify undervalued stocks
+
+## Blog Posts
+
+- [Use webdriver headless support instead xvfb hack](https://ramonmedeiros.dev/2019/07/15/headless-chrome-on-robot.html): switching from XVFB to native headless Chrome for Selenium tests in Azure DevOps
+- [Test Pyramid concept](https://ramonmedeiros.dev/2019/07/15/test-pyramid-concept.html): overview of the test pyramid strategy for software quality
+- [Sprunge: copy-paste from remote machines](https://ramonmedeiros.dev/2019/07/16/sprunge-tutorial.html): sharing text and screenshots between machines using sprunge.us
+- [Record user journey with Hotjar](https://ramonmedeiros.dev/2019/07/17/record-user-journey.html): using Hotjar for exploratory testing and UX analysis
+- [Send files over local network with Python](https://ramonmedeiros.dev/2019/07/18/send-files-in-your-network-with-python.html): Python's built-in HTTP server for file sharing
+- [Temporary email in tests](https://ramonmedeiros.dev/2019/07/18/use-temp-email-tests.html): using temp-mail.org and Robot Framework for email verification in tests
+- [Robot Framework on Safari and Azure DevOps](https://ramonmedeiros.dev/2019/07/26/robot-safari-azure.html): running cross-browser UI tests on Safari via Azure pipelines
+- [Set up a Kafka test environment](https://ramonmedeiros.dev/2019/08/07/set-up-kafka-testing-env.html): running Kafka and Zookeeper locally with Docker for development
+- [Record screen during E2E tests](https://ramonmedeiros.dev/2019/10/18/record-your-ui-tests.html): using ffmpeg to capture video of automated test runs for debugging
+- [Mock Google Cloud API in Python](https://ramonmedeiros.dev/2019/11/11/mocking-google-api-python.html): using Python's unittest.mock to test code that calls Google Cloud Storage
+- [Keep YouTube video visible while browsing](https://ramonmedeiros.dev/2019/11/12/keep-youtube-videos-visible.html): browser Picture-in-Picture via JavaScript console
+- [Python pdb for interactive script execution](https://ramonmedeiros.dev/2020/02/06/resume-feature-pdb.html): pausing and resuming long-running Python scripts with the debugger
+- [Google Identity-Aware Proxy for external hosts](https://ramonmedeiros.dev/2020/04/01/google-iap-external-hosts.html): protecting non-GCP applications with Google IAP using an nginx ambassador container on Kubernetes
+- [printf format string exploitation](https://ramonmedeiros.dev/2020/05/15/printf-exploitation.html): exploiting printf format string vulnerabilities in a C CTF challenge
+- [Mock global Python modules](https://ramonmedeiros.dev/2020/09/07/mock-modules.html): patching top-level imports like boto3 in Python unit tests
+- [Mock REST API with AWS API Gateway](https://ramonmedeiros.dev/2020/10/09/mock_with_apigateway.html): deploying a mock API via OpenAPI spec and AWS API Gateway for integration testing
+- [Webtorrent in a side project](https://ramonmedeiros.dev/2021/05/18/webtorrent_experience.html): lessons learned building a React app with WebTorrent for browser-based video streaming
+
+## Links
+
+- Website: https://ramonmedeiros.dev
+- GitHub: https://github.com/ramonmedeiros
+- LinkedIn: https://www.linkedin.com/in/ramonmedeiros/

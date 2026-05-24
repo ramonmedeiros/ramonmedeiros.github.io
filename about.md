@@ -1,33 +1,36 @@
 ---
 layout: page
 title: About
-description: "Personal interests and things I'm working with"
+description: "Ramon Medeiros is a Software Engineer specializing in backend development, automated testing, and cloud infrastructure with Golang, Python, and Kubernetes."
 permalink: /about/
 ---
 
-Main technologies that I work:
+Ramon Medeiros is a Software Engineer with experience in backend development, automated testing, and cloud infrastructure. He writes about practical engineering problems and solutions at [ramonmedeiros.dev](https://ramonmedeiros.dev).
 
-* Golang
-* Python
-* Kubernetes
+## Technical Skills
 
-Side-projects:
+**Languages:** Golang, Python, JavaScript  
+**Infrastructure:** Kubernetes, Docker, Apache Kafka  
+**Cloud:** AWS (Lambda, API Gateway, SSM, S3), Google Cloud Platform (Cloud Storage, Identity-Aware Proxy)  
+**Testing:** Selenium, Robot Framework, Python unittest/mock, API mocking, automated UI testing, end-to-end testing  
+**CI/CD:** Azure DevOps  
+**Security:** CTF competitions, binary exploitation, format string vulnerabilities  
 
-* [Cheap Stocks][cheapstocks]: tool to help investors to stock pick cheap stocks based on value 
+## Side Projects
 
+- **[Cheap Stocks](https://cheapstocks.app)** — a stock screening tool that helps value investors identify undervalued stocks based on fundamental metrics
 
+## Writing
 
-This blog uses [jekyll][jekyll-organization]
+This blog covers backend engineering, testing strategies, and cloud infrastructure. Topics include:
 
+- Automated testing with Selenium, Robot Framework, and Python mocking patterns
+- AWS and Google Cloud Platform integrations and cost-effective architectures
+- Kubernetes, Docker, and container-based workflows
+- Security topics and CTF challenge writeups
+- Developer productivity tools and techniques
 
+## Links
 
-
-[jekyll-organization]: https://github.com/jekyll
-[voi]: https://www.voiscooters.com/
-[cheapstocks]: https://cheapstocks.app
-[poker]: https://www.pokernow.club/
-[samuel]: https://github.com/samuelsimoes
-[kimchi]: https://github.com/kimchi-project
-[freeCodeCamp]: http://freecodecamp.org/learn/machine-learning-with-python
-[googleML]: https://developers.google.com/machine-learning/crash-course
-[ctf]: https://ctf.hacker101.com/
+- GitHub: [github.com/ramonmedeiros](https://github.com/ramonmedeiros)
+- LinkedIn: [linkedin.com/in/ramonmedeiros](https://www.linkedin.com/in/ramonmedeiros/)

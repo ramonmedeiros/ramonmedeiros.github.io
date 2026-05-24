@@ -9,6 +9,37 @@
   {% endif %}	
   {% seo %}
   {%- feed_meta -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ramon Medeiros",
+    "url": "https://ramonmedeiros.dev",
+    "jobTitle": "Software Engineer",
+    "description": "Software Engineer specializing in backend development, automated testing, and cloud infrastructure with Golang, Python, and Kubernetes.",
+    "sameAs": [
+      "https://github.com/ramonmedeiros",
+      "https://www.linkedin.com/in/ramonmedeiros/"
+    ],
+    "knowsAbout": [
+      "Golang",
+      "Python",
+      "Kubernetes",
+      "Docker",
+      "Apache Kafka",
+      "AWS Lambda",
+      "AWS API Gateway",
+      "Google Cloud Platform",
+      "Automated Testing",
+      "Selenium",
+      "Robot Framework",
+      "Backend Development",
+      "Cloud Infrastructure",
+      "CI/CD",
+      "Azure DevOps"
+    ]
+  }
+  </script>
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include analytics.html -%}
   {%- endif -%}
