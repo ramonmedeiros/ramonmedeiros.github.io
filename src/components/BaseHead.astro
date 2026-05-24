@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+import { SITE_TITLE } from '../consts';
+import { Font } from 'astro:assets';
+
+interface Props {
+	title: string;
+	description: string;
+	keywords?: string[];
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const { title, description, keywords = [] } = Astro.props;
+
+const personSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Ramon Medeiros',
+	url: 'https://ramonmedeiros.dev',
+	jobTitle: 'Software Engineer',
+	description:
+		'Software Engineer specializing in backend development, automated testing, and cloud infrastructure with Golang, Python, and Kubernetes.',
+	sameAs: ['https://github.com/ramonmedeiros', 'https://www.linkedin.com/in/ramonmedeiros/'],
+	knowsAbout: [
+		'Golang',
+		'Python',
+		'Kubernetes',
+		'Docker',
+		'Apache Kafka',
+		'AWS Lambda',
+		'AWS API Gateway',
+		'Google Cloud Platform',
+		'Automated Testing',
+		'Selenium',
+		'Robot Framework',
+		'Backend Development',
+		'Cloud Infrastructure',
+		'CI/CD',
+		'Azure DevOps',
+	],
+};
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={new URL('rss.xml', Astro.site)} />
+<meta name="generator" content={Astro.generator} />
+<meta name="google-site-verification" content="eXWJxxYyK9LgkYvr0JxNvqfovuz2xm-Ot9lsxzQgknk" />
+
+<Font cssVariable="--font-atkinson" preload />
+
+<link rel="canonical" href={canonicalURL} />
+
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+{keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+
+<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
+{
+	import.meta.env.PROD && (
+		<script is:inline>
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] =
+					i[r] ||
+					function () {
+						(i[r].q = i[r].q || []).push(arguments);
+					};
+				i[r].l = 1 * new Date();
+				a = s.createElement(o);
+				m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m);
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-144618823-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	)
+}

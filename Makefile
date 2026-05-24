@@ -1,10 +1,12 @@
-PWD=$(shell pwd)
+.PHONY: run build preview
 
 run:
-	bundle exec jekyll serve
+	npm run dev
 
-run-local:
-	docker run --rm --volume="$(PWD):/srv/jekyll" --volume="$(PWD)/vendor/bundle:/usr/local/bundle" --env JEKYLL_ENV=development -p 4000:4000 jekyll/jekyll:3.8 jekyll serve
+build:
+	npm run build
 
+preview:
+	npm run preview
 
 default: run

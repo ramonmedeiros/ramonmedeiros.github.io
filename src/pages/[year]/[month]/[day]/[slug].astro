@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import BlogPost from '../../../../layouts/BlogPost.astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const posts = await getCollection('blog');
+	return posts.map((post) => {
+		// post.id is the filename without extension: "2019-07-15-headless-chrome-on-robot"
+		const parts = post.id.split('-');
+		const year = parts[0];
+		const month = parts[1];
+		const day = parts[2];
+		const slug = parts.slice(3).join('-');
+		return {
+			params: { year, month, day, slug },
+			props: { post },
+		};
+	});
+};
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BlogPost {...post.data}>
+	<Content />
+</BlogPost>

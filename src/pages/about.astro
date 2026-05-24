@@ -1,0 +1,79 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+const title = 'About';
+const description =
+	'Ramon Medeiros is a Software Engineer specializing in backend development, automated testing, and cloud infrastructure with Golang, Python, and Kubernetes.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			.prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="prose">
+				<h1>About</h1>
+				<p>
+					Ramon Medeiros is a Software Engineer with experience in backend development, automated
+					testing, and cloud infrastructure. He writes about practical engineering problems and
+					solutions at <a href="https://ramonmedeiros.dev">ramonmedeiros.dev</a>.
+				</p>
+
+				<h2>Technical Skills</h2>
+				<p>
+					<strong>Languages:</strong> Golang, Python, JavaScript<br />
+					<strong>Infrastructure:</strong> Kubernetes, Docker, Apache Kafka<br />
+					<strong>Cloud:</strong> AWS (Lambda, API Gateway, SSM, S3), Google Cloud Platform (Cloud
+					Storage, Identity-Aware Proxy)<br />
+					<strong>Testing:</strong> Selenium, Robot Framework, Python unittest/mock, API mocking,
+					automated UI testing, end-to-end testing<br />
+					<strong>CI/CD:</strong> Azure DevOps<br />
+					<strong>Security:</strong> CTF competitions, binary exploitation, format string vulnerabilities
+				</p>
+
+				<h2>Side Projects</h2>
+				<ul>
+					<li>
+						<strong><a href="https://cheapstocks.app">Cheap Stocks</a></strong> — a stock screening
+						tool that helps value investors identify undervalued stocks based on fundamental metrics
+					</li>
+				</ul>
+
+				<h2>Writing</h2>
+				<p>This blog covers backend engineering, testing strategies, and cloud infrastructure. Topics include:</p>
+				<ul>
+					<li>Automated testing with Selenium, Robot Framework, and Python mocking patterns</li>
+					<li>AWS and Google Cloud Platform integrations and cost-effective architectures</li>
+					<li>Kubernetes, Docker, and container-based workflows</li>
+					<li>Security topics and CTF challenge writeups</li>
+					<li>Developer productivity tools and techniques</li>
+				</ul>
+
+				<h2>Links</h2>
+				<ul>
+					<li>GitHub: <a href="https://github.com/ramonmedeiros">github.com/ramonmedeiros</a></li>
+					<li>
+						LinkedIn: <a href="https://www.linkedin.com/in/ramonmedeiros/"
+							>linkedin.com/in/ramonmedeiros</a
+						>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

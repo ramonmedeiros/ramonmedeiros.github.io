@@ -1,0 +1,64 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+function postUrl(id: string): string {
+	const parts = id.split('-');
+	const year = parts[0];
+	const month = parts[1];
+	const day = parts[2];
+	const slug = parts.slice(3).join('-');
+	return `/${year}/${month}/${day}/${slug}/`;
+}
+
+const keywords = [
+	'ramon medeiros',
+	'software engineer',
+	'backend engineer',
+	'golang',
+	'python',
+	'kubernetes',
+	'automated testing',
+	'cloud infrastructure',
+	'aws',
+	'google cloud',
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} keywords={keywords} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<p>
+				Software Engineer specializing in backend development, automated testing, and cloud
+				infrastructure. Writing about Golang, Python, Kubernetes, AWS, Google Cloud Platform, and
+				practical engineering solutions.
+			</p>
+			<ul style="list-style:none;padding:0">
+				{
+					posts.map((post) => (
+						<li>
+							<a href={postUrl(post.id)}>{post.data.title}</a>
+							<small style="margin-left:0.5em;color:rgb(var(--gray))">
+								<FormattedDate date={post.data.date} />
+							</small>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
