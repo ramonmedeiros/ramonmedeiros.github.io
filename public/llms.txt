@@ -1,18 +1,32 @@
 # Ramon Medeiros
 
-> Software Engineer specializing in backend development, automated testing, and cloud infrastructure.
+> Backend engineer in Stockholm working on agentic AI platforms, LLM evaluation, payments systems, and cloud infrastructure.
 
-Ramon Medeiros is a Software Engineer who writes about practical engineering problems at ramonmedeiros.dev. His work covers backend development with Golang and Python, Kubernetes, automated testing strategies, and cloud infrastructure on AWS and Google Cloud Platform.
+Ramon Medeiros is a backend engineer based in Stockholm who writes about practical engineering problems at ramonmedeiros.dev. His work spans agentic AI platforms and LLM evaluation, payment systems serving European markets, distributed backends, and the cloud infrastructure underneath them. He started out in virtualization and open-source systems tooling, then moved through test automation and continuous integration, into cloud infrastructure, and on to product backends.
 
 ## Expertise
 
+- Agentic AI and evals: backends for agentic platforms, durable execution with Temporal, evaluation harnesses for LLM behavior
+- Payments and financial systems: payment methods across European markets, Apple Pay and Google Pay backend integrations, subscription products, in-house ledgers, A/B pricing and fraud analytics
+- Distributed backends: monolith-to-microservices migrations, GraphQL and REST APIs, third-party integrations, accounting automation
 - Backend development: Golang, Python, JavaScript
-- Container orchestration: Kubernetes, Docker
-- Cloud platforms: AWS (Lambda, API Gateway, SSM, S3), Google Cloud Platform (Cloud Storage, Identity-Aware Proxy)
-- Automated testing: Selenium, Robot Framework, Python unittest and mocking, API mocking with AWS API Gateway
+- Container orchestration and IaC: Kubernetes, Docker, Terraform, Helm
+- Cloud platforms: AWS (Lambda, API Gateway, SSM, S3), Google Cloud Platform (Cloud Storage, CloudSQL, Bigtable, Identity-Aware Proxy)
 - Message streaming: Apache Kafka
-- CI/CD: Azure DevOps
-- Security: CTF competitions, binary exploitation, printf format string vulnerabilities
+- Automated testing: Selenium, Robot Framework, Python unittest and mocking, API mocking with AWS API Gateway, end-to-end and UI automation
+- CI/CD: Azure DevOps, Jenkins
+
+## Education
+
+- Universidade Estadual de Campinas (UNICAMP): Bachelor's Degree, Economics (2016-2018)
+- Fatec Americana "Ministro Ralph Biasi": Technologist, Information Security (2010-2012)
+
+## Languages
+
+- Portuguese (native)
+- English (bilingual)
+- Spanish (limited working)
+- Swedish (elementary)
 
 ## Side Projects
 

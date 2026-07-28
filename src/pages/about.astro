@@ -5,13 +5,26 @@ import Header from '../components/Header.astro';
 
 const title = 'About';
 const description =
-	'Ramon Medeiros is a Software Engineer specializing in backend development, automated testing, and cloud infrastructure with Golang, Python, and Kubernetes.';
+	'Ramon Medeiros is a backend engineer in Stockholm working on agentic AI platforms, payments systems, distributed backends, and cloud infrastructure with Golang, Python, Kubernetes, and Terraform.';
+const keywords = [
+	'backend engineer Stockholm',
+	'agentic AI backend',
+	'Golang',
+	'Python',
+	'Kubernetes',
+	'Terraform',
+	'Helm',
+	'Temporal',
+	'payments engineering',
+	'microservices',
+	'cloud infrastructure',
+];
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} keywords={keywords} />
 		<style>
 			.prose {
 				width: 720px;
@@ -19,6 +32,10 @@ const description =
 				margin: auto;
 				padding: 1em;
 				color: rgb(var(--gray-dark));
+			}
+			.prose h2 {
+				font-size: 1.5em;
+				margin-top: 2em;
 			}
 		</style>
 	</head>
@@ -28,21 +45,69 @@ const description =
 			<div class="prose">
 				<h1>About</h1>
 				<p>
-					Ramon Medeiros is a Software Engineer with experience in backend development, automated
-					testing, and cloud infrastructure. He writes about practical engineering problems and
-					solutions at <a href="https://ramonmedeiros.dev">ramonmedeiros.dev</a>.
+					Ramon Medeiros is a backend engineer based in Stockholm. His work spans agentic AI
+					platforms, payment systems serving European markets, distributed
+					backends, and the cloud infrastructure underneath all of it.
 				</p>
+				<p>
+					He started out in virtualization and open-source systems tooling — KVM, qemu, libvirt —
+					then moved through test automation and continuous integration, into cloud infrastructure,
+					and on to product backends. He writes about practical engineering problems and solutions
+					at <a href="https://ramonmedeiros.dev">ramonmedeiros.dev</a>.
+				</p>
+
+				<h2>What I Work On</h2>
+				<ul>
+					<li>
+						<strong>Payments and financial systems</strong> — payment methods across European
+						markets, Apple Pay and Google Pay on the backend, a subscription product, in-house
+						ledgers, and A/B pricing and fraud analytics
+					</li>
+					<li>
+						<strong>Distributed backends</strong> — monolith-to-microservices migrations, GraphQL
+						and REST APIs, third-party integrations, and accounting automation
+					</li>
+					<li>
+						<strong>Cloud infrastructure</strong> — Terraform, Helm, and Kubernetes across AWS and
+						Google Cloud, including backup tooling for CloudSQL and Bigtable
+					</li>
+					<li>
+						<strong>Test engineering</strong> — moving suites from release gate into CI, cutting a
+						Robot Framework suite from an hour to 25 minutes, and guidelines that eliminate flaky
+						tests
+					</li>
+				</ul>
 
 				<h2>Technical Skills</h2>
 				<p>
-					<strong>Languages:</strong> Golang, Python, JavaScript<br />
-					<strong>Infrastructure:</strong> Kubernetes, Docker, Apache Kafka<br />
+					<strong>Languages:</strong> Golang, Python, TypeScript<br />
+					<strong>Backend:</strong> microservices, REST and GraphQL APIs, Apache Kafka, Temporal,
+					event-driven and durable execution<br />
+					<strong>Infrastructure:</strong> Kubernetes, Docker, Terraform, Helm<br />
 					<strong>Cloud:</strong> AWS (Lambda, API Gateway, SSM, S3), Google Cloud Platform (Cloud
-					Storage, Identity-Aware Proxy)<br />
+					Storage, CloudSQL, Bigtable, Identity-Aware Proxy)<br />
+					<strong>AI:</strong> LLM evaluation harnesses, agentic backends, machine learning
+					fundamentals<br />
 					<strong>Testing:</strong> Selenium, Robot Framework, Python unittest/mock, API mocking,
-					automated UI testing, end-to-end testing<br />
-					<strong>CI/CD:</strong> Azure DevOps<br />
-					<strong>Security:</strong> CTF competitions, binary exploitation, format string vulnerabilities
+					end-to-end and UI automation<br />
+					<strong>CI/CD:</strong> Azure DevOps, Jenkins
+				</p>
+
+				<h2>Education</h2>
+				<ul>
+					<li>
+						<strong>Universidade Estadual de Campinas (UNICAMP)</strong> — Bachelor's Degree,
+						Economics (2016–2018)
+					</li>
+					<li>
+						<strong>Fatec Americana "Ministro Ralph Biasi"</strong> — Technologist, Information
+						Security (2010–2012)
+					</li>
+				</ul>
+
+				<h2>Languages</h2>
+				<p>
+					Portuguese (native), English (bilingual), Spanish (limited working), Swedish (elementary)
 				</p>
 
 				<h2>Side Projects</h2>
@@ -51,16 +116,6 @@ const description =
 						<strong><a href="https://cheapstocks.app">Cheap Stocks</a></strong> — a stock screening
 						tool that helps value investors identify undervalued stocks based on fundamental metrics
 					</li>
-				</ul>
-
-				<h2>Writing</h2>
-				<p>This blog covers backend engineering, testing strategies, and cloud infrastructure. Topics include:</p>
-				<ul>
-					<li>Automated testing with Selenium, Robot Framework, and Python mocking patterns</li>
-					<li>AWS and Google Cloud Platform integrations and cost-effective architectures</li>
-					<li>Kubernetes, Docker, and container-based workflows</li>
-					<li>Security topics and CTF challenge writeups</li>
-					<li>Developer productivity tools and techniques</li>
 				</ul>
 
 				<h2>Links</h2>

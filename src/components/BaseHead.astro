@@ -19,8 +19,32 @@ const personSchema = {
 	url: 'https://ramonmedeiros.dev',
 	jobTitle: 'Software Engineer',
 	description:
-		'Software Engineer specializing in backend development, automated testing, and cloud infrastructure with Golang, Python, and Kubernetes.',
+		'Backend engineer in Stockholm working on agentic AI platforms, LLM evaluation, payments systems, distributed backends, and cloud infrastructure with Golang, Python, Kubernetes, and Terraform.',
 	sameAs: ['https://github.com/ramonmedeiros', 'https://www.linkedin.com/in/ramonmedeiros/'],
+	homeLocation: {
+		'@type': 'Place',
+		address: {
+			'@type': 'PostalAddress',
+			addressLocality: 'Stockholm',
+			addressCountry: 'SE',
+		},
+	},
+	alumniOf: [
+		{
+			'@type': 'CollegeOrUniversity',
+			name: 'Universidade Estadual de Campinas',
+		},
+		{
+			'@type': 'CollegeOrUniversity',
+			name: 'Fatec Americana "Ministro Ralph Biasi"',
+		},
+	],
+	knowsLanguage: [
+		{ '@type': 'Language', name: 'Portuguese' },
+		{ '@type': 'Language', name: 'English' },
+		{ '@type': 'Language', name: 'Spanish' },
+		{ '@type': 'Language', name: 'Swedish' },
+	],
 	knowsAbout: [
 		'Golang',
 		'Python',
@@ -37,6 +61,16 @@ const personSchema = {
 		'Cloud Infrastructure',
 		'CI/CD',
 		'Azure DevOps',
+		'Terraform',
+		'Helm',
+		'Temporal',
+		'LLM Evaluation',
+		'Agentic AI Systems',
+		'GraphQL',
+		'Microservices',
+		'Payments Systems',
+		'Infrastructure as Code',
+		'Google Cloud Bigtable',
 	],
 };
 ---
