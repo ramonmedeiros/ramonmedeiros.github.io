@@ -114,7 +114,23 @@ const keywords = [
 				<ul>
 					<li>
 						<strong><a href="https://cheapstocks.app">Cheap Stocks</a></strong> — a stock screening
-						tool that helps value investors identify undervalued stocks based on fundamental metrics
+						tool that helps value investors identify undervalued stocks based on fundamental
+						metrics. A Python scraper pulls 10-K filings and daily prices from SEC EDGAR into
+						Cloudflare R2, a TypeScript Worker serves them over HTTP, and a React frontend on
+						Cloudflare Pages puts the numbers side by side
+					</li>
+					<li>
+						<strong><a href="https://llmzap.pages.dev">LLMZAP</a></strong> — a chat backend for
+						people who don't share a language. Each message is language-detected, then translated
+						by an LLM only into the languages the recipients actually need, so nobody pays for a
+						translation nobody reads. Built as a Cloudflare Worker with D1 and one Durable Object
+						per conversation for live fan-out, in hexagonal TypeScript
+					</li>
+					<li>
+						<strong><a href="https://github.com/findacocktail/backend">Find a Cocktail</a></strong>
+						 — pick the ingredients you have, see what you can mix. A Go crawler scrapes cocktail
+						recipes from IBA and liquor.com, a bleve-backed API does include/exclude ingredient
+						search, and a static frontend does the same search client-side with MiniSearch
 					</li>
 				</ul>
 
