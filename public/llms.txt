@@ -51,6 +51,8 @@ Ramon Medeiros is a backend engineer based in Stockholm who writes about practic
 - [Mock global Python modules](https://ramonmedeiros.dev/2020/09/07/mock-modules.html): patching top-level imports like boto3 in Python unit tests
 - [Mock REST API with AWS API Gateway](https://ramonmedeiros.dev/2020/10/09/mock_with_apigateway.html): deploying a mock API via OpenAPI spec and AWS API Gateway for integration testing
 - [Webtorrent in a side project](https://ramonmedeiros.dev/2021/05/18/webtorrent_experience.html): lessons learned building a React app with WebTorrent for browser-based video streaming
+- [Claude Code /low-priority command](https://ramonmedeiros.dev/2026/09/19/claude_low_priority.html): continuing work at lower priority after hitting the Claude Code usage limit
+- [BlurHash and CSS transitions for image loading](https://ramonmedeiros.dev/2026/09/21/blurhash_css_transitions.html): sending a blurred image placeholder in the API response and fading the real image in with CSS
 
 ## Links
 
