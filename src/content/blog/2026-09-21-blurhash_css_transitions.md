@@ -16,30 +16,26 @@ On [Find a Cocktail][findacocktail] every cocktail has a photo. The list loads f
 
 The usual fix is a thumbnail, but that is one more request per image. [BlurHash][blurhash] avoids it: you encode the image once into a short string, around 30 characters, and send it in the same JSON that already carries the image URL. No extra round trip.
 
-The backend does it at upload time, [in this PR][pr]. It decodes the uploaded image, encodes the hash with a small component count (4x3 is enough), and stores it in the same row as the image. The API just returns one more field.
+The backend does it at upload time: decode the uploaded image, encode the hash with a small component count (4x3 is enough), and store it in the same row as the image. The API just returns one more field.
 
-The client decodes the hash into a tiny canvas, paints it as the background, and lets CSS do the rest:
+The client turns that string back into pixels and paints them on a canvas:
 
-```css
-.cocktail-image {
-  opacity: 0;
-  transition: opacity 300ms ease-in;
-}
+```javascript
+import { decode } from "blurhash";
 
-.cocktail-image.loaded {
-  opacity: 1;
-}
+const pixels = decode(hash, 32, 32);
+
+const canvas = document.createElement("canvas");
+canvas.width = 32;
+canvas.height = 32;
+
+const ctx = canvas.getContext("2d");
+const imageData = ctx.createImageData(32, 32);
+imageData.data.set(pixels);
+ctx.putImageData(imageData, 0, 0);
 ```
 
-The `loaded` class comes from the image's `load` event. The blurred version sits behind, the real one fades over it.
-
-Some things worth knowing:
-
-- Encode once, on upload. Doing it per request burns CPU on something that never changes.
-- Reserve the space with an aspect ratio, otherwise the layout still jumps.
-- The hash is useless without dimensions, so return width and height too.
-- It is a blur, not a preview. Any text in the image is gone.
+32x32 is enough: the browser scales it up and the result is blurred anyway. The canvas sits behind the real image, which starts at `opacity: 0` and transitions to `1` on its `load` event. No empty boxes, no pop.
 
 [findacocktail]: https://www.findacocktail.com
 [blurhash]: https://blurha.sh/
-[pr]: https://github.com/findacocktail/backend/pull/8
