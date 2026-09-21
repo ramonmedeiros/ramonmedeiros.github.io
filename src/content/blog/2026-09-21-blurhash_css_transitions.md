@@ -37,5 +37,9 @@ ctx.putImageData(imageData, 0, 0);
 
 32x32 is enough: the browser scales it up and the result is blurred anyway. The canvas sits behind the real image, which starts at `opacity: 0` and transitions to `1` on its `load` event. No empty boxes, no pop.
 
+Slowed down, it looks like this:
+
+![Cocktail cards loading: the BlurHash placeholders show first, then the photos fade in over them](/blurhash-findacocktail.gif)
+
 [findacocktail]: https://www.findacocktail.com
 [blurhash]: https://blurha.sh/
