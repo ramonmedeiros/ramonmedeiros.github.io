@@ -10,8 +10,6 @@ keywords:
   - feross
 ---
 
-# My experience using webtorrent in a side project
-
 As a fan of [Stremio](stremio), I always wait for the web version of it that never came. Then suddenly I saw [Webtorrent](webtorrent), which could be a way to do it. 
 
 Webtorrent is an implementation very easy to use, you just add the magnet URI, and choose the file to play. After seeing that, I had one goal in mind: why not use Stremio plugins as source of torrents and display it. Then I created [Juan Carlos Web](juan_carlos), a poor react UI listing the movies and try to watch.

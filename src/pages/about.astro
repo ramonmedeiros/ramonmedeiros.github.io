@@ -26,113 +26,185 @@ const keywords = [
 	<head>
 		<BaseHead title={title} description={description} keywords={keywords} />
 		<style>
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+			h1 {
+				margin-bottom: 0.25rem;
 			}
-			.prose h2 {
-				font-size: 1.5em;
-				margin-top: 2em;
+			.role {
+				margin-bottom: 1.5rem;
+				color: var(--muted);
+			}
+			.focus {
+				padding: 0;
+				list-style: none;
+			}
+			.focus li + li {
+				margin-top: 1rem;
+			}
+			.focus strong {
+				display: block;
+			}
+			.skills {
+				display: grid;
+				grid-template-columns: 8rem 1fr;
+				gap: 0.6rem 1.5rem;
+				margin: 0;
+			}
+			.skills dt {
+				color: var(--muted);
+			}
+			.skills dd {
+				margin: 0;
+			}
+			.rows {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.rows li {
+				display: flex;
+				gap: 0.25rem 1.5rem;
+				justify-content: space-between;
+				align-items: baseline;
+				margin: 0;
+				padding: 0.75rem 0;
+				border-bottom: 1px solid var(--border);
+			}
+			.rows li:first-child {
+				border-top: 1px solid var(--border);
+			}
+			.rows span {
+				display: block;
+				color: var(--muted);
+			}
+			.rows .meta {
+				flex-shrink: 0;
+			}
+			@media (max-width: 640px) {
+				.skills {
+					grid-template-columns: 1fr;
+					gap: 0.1rem;
+				}
+				.skills dd + dt {
+					margin-top: 0.75rem;
+				}
+				.rows li {
+					flex-direction: column;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<div class="prose">
-				<h1>About</h1>
-				<p>
-					Ramon Medeiros is a backend engineer based in Stockholm. His work spans agentic AI
-					platforms, payment systems serving European markets, distributed
-					backends, and the cloud infrastructure underneath all of it.
-				</p>
-				<p>
-					He started out in virtualization and open-source systems tooling — KVM, qemu, libvirt —
-					then moved through test automation and continuous integration, into cloud infrastructure,
-					and on to product backends. He writes about practical engineering problems and solutions
-					at <a href="https://ramonmedeiros.dev">ramonmedeiros.dev</a>.
-				</p>
+			<h1>Ramon Medeiros</h1>
+			<p class="role">Software Engineer · Stockholm</p>
+			<p>
+				Ramon Medeiros is a backend engineer based in Stockholm. His work spans agentic AI
+				platforms, payment systems serving European markets, distributed backends, and the cloud
+				infrastructure underneath all of it.
+			</p>
+			<p>
+				He started out in virtualization and open-source systems tooling — KVM, qemu, libvirt —
+				then moved through test automation and continuous integration, into cloud infrastructure,
+				and on to product backends. He writes about practical engineering problems and
+				solutions <a href="/">on this site</a>.
+			</p>
 
-				<h2>What I Work On</h2>
-				<ul>
-					<li>
-						<strong>Payments and financial systems</strong> — payment methods across European
-						markets, Apple Pay and Google Pay on the backend, a subscription product, in-house
-						ledgers, and A/B pricing and fraud analytics
-					</li>
-					<li>
-						<strong>Distributed backends</strong> — monolith-to-microservices migrations, GraphQL
-						and REST APIs, third-party integrations, and accounting automation
-					</li>
-					<li>
-						<strong>Cloud infrastructure</strong> — Terraform, Helm, and Kubernetes across AWS and
-						Google Cloud, including backup tooling for CloudSQL and Bigtable
-					</li>
-					<li>
-						<strong>Test engineering</strong> — moving suites from release gate into CI, cutting a
-						Robot Framework suite from an hour to 25 minutes, and guidelines that eliminate flaky
-						tests
-					</li>
-				</ul>
+			<h2 class="section-label">Focus</h2>
+			<ul class="focus">
+				<li>
+					<strong>Payments and financial systems</strong>
+					Payment methods across European markets, Apple Pay and Google Pay on the backend, a
+					subscription product, in-house ledgers, and A/B pricing and fraud analytics.
+				</li>
+				<li>
+					<strong>Distributed backends</strong>
+					Monolith-to-microservices migrations, GraphQL and REST APIs, third-party integrations,
+					and accounting automation.
+				</li>
+				<li>
+					<strong>Cloud infrastructure</strong>
+					Terraform, Helm, and Kubernetes across AWS and Google Cloud, including backup tooling for
+					CloudSQL and Bigtable.
+				</li>
+				<li>
+					<strong>Test engineering</strong>
+					Moving suites from release gate into CI, cutting a Robot Framework suite from an hour to
+					25 minutes, and guidelines that eliminate flaky tests.
+				</li>
+			</ul>
 
-				<h2>Technical Skills</h2>
-				<p>
-					<strong>Languages:</strong> Golang, Python, TypeScript<br />
-					<strong>Backend:</strong> microservices, REST and GraphQL APIs, Apache Kafka, Temporal,
-					event-driven and durable execution<br />
-					<strong>Infrastructure:</strong> Kubernetes, Docker, Terraform, Helm<br />
-					<strong>Cloud:</strong> AWS (Lambda, API Gateway, SSM, S3), Google Cloud Platform (Cloud
-					Storage, CloudSQL, Bigtable, Identity-Aware Proxy)<br />
-					<strong>AI:</strong> LLM evaluation harnesses, agentic backends, machine learning
-					fundamentals<br />
-					<strong>Testing:</strong> Selenium, Robot Framework, Python unittest/mock, API mocking,
-					end-to-end and UI automation<br />
-					<strong>CI/CD:</strong> Azure DevOps, Jenkins
-				</p>
+			<h2 class="section-label">Skills</h2>
+			<dl class="skills">
+				<dt>Languages</dt>
+				<dd>Golang, Python, TypeScript</dd>
+				<dt>Backend</dt>
+				<dd>
+					Microservices, REST and GraphQL APIs, Apache Kafka, Temporal, event-driven and durable
+					execution
+				</dd>
+				<dt>Infrastructure</dt>
+				<dd>Kubernetes, Docker, Terraform, Helm</dd>
+				<dt>Cloud</dt>
+				<dd>
+					AWS (Lambda, API Gateway, SSM, S3), Google Cloud Platform (Cloud Storage, CloudSQL,
+					Bigtable, Identity-Aware Proxy)
+				</dd>
+				<dt>AI</dt>
+				<dd>LLM evaluation harnesses, agentic backends, machine learning fundamentals</dd>
+				<dt>Testing</dt>
+				<dd>
+					Selenium, Robot Framework, Python unittest/mock, API mocking, end-to-end and UI
+					automation
+				</dd>
+				<dt>CI/CD</dt>
+				<dd>Azure DevOps, Jenkins</dd>
+			</dl>
 
-				<h2>Education</h2>
-				<ul>
-					<li>
-						<strong>Universidade Estadual de Campinas (UNICAMP)</strong> — Bachelor's Degree,
-						Economics (2016–2018, incomplete)
-					</li>
-					<li>
-						<strong>Fatec Americana "Ministro Ralph Biasi"</strong> — Technologist, Information
-						Security (2010–2012)
-					</li>
-				</ul>
+			<h2 class="section-label">Education</h2>
+			<ul class="rows">
+				<li>
+					<div>
+						<strong>Universidade Estadual de Campinas (UNICAMP)</strong>
+						<span>Bachelor's Degree, Economics — incomplete</span>
+					</div>
+					<span class="meta">2016–2018</span>
+				</li>
+				<li>
+					<div>
+						<strong>Fatec Americana "Ministro Ralph Biasi"</strong>
+						<span>Technologist, Information Security</span>
+					</div>
+					<span class="meta">2010–2012</span>
+				</li>
+			</ul>
 
-				<h2>Languages</h2>
-				<p>
-					Portuguese (native), English (bilingual), Spanish (limited working), Swedish (elementary)
-				</p>
+			<h2 class="section-label">Languages</h2>
+			<ul class="rows">
+				<li><strong>Portuguese</strong><span class="meta">Native</span></li>
+				<li><strong>English</strong><span class="meta">Bilingual</span></li>
+				<li><strong>Spanish</strong><span class="meta">Limited working</span></li>
+				<li><strong>Swedish</strong><span class="meta">Elementary</span></li>
+			</ul>
 
-				<h2>Side Projects</h2>
-				<ul>
-					<li>
-						<strong><a href="https://cheapstocks.app">Cheap Stocks</a></strong> — a stock screening
-						tool that helps value investors identify undervalued stocks based on fundamental
-						metrics.
-					</li>
-					<li>
+			<h2 class="section-label">Side projects</h2>
+			<ul class="rows">
+				<li>
+					<div>
+						<strong><a href="https://cheapstocks.app">Cheap Stocks</a></strong>
+						<span>
+							A stock screening tool that helps value investors identify undervalued stocks based on
+							fundamental metrics.
+						</span>
+					</div>
+				</li>
+				<li>
+					<div>
 						<strong><a href="https://www.findacocktail.com">Find a Cocktail</a></strong>
-						 — pick the ingredients you have, see what you can mix. 
-					</li>
-				</ul>
-
-				<h2>Links</h2>
-				<ul>
-					<li>GitHub: <a href="https://github.com/ramonmedeiros">github.com/ramonmedeiros</a></li>
-					<li>
-						LinkedIn: <a href="https://www.linkedin.com/in/ramonmedeiros/"
-							>linkedin.com/in/ramonmedeiros</a
-						>
-					</li>
-				</ul>
-			</div>
+						<span>Pick the ingredients you have, see what you can mix.</span>
+					</div>
+				</li>
+			</ul>
 		</main>
 		<Footer />
 	</body>

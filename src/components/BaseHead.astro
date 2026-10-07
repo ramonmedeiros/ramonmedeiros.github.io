@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import { SITE_TITLE } from '../consts';
-import { Font } from 'astro:assets';
 
 interface Props {
 	title: string;
@@ -77,13 +76,12 @@ const personSchema = {
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={new URL('rss.xml', Astro.site)} />
 <meta name="generator" content={Astro.generator} />
 <meta name="google-site-verification" content="eXWJxxYyK9LgkYvr0JxNvqfovuz2xm-Ot9lsxzQgknk" />
-
-<Font cssVariable="--font-atkinson" preload />
 
 <link rel="canonical" href={canonicalURL} />
 
