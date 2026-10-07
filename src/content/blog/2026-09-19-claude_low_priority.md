@@ -10,8 +10,6 @@ keywords:
   - low-priority
 ---
 
-# Claude Code /low-priority command
-
 I was testing the [Claude Security plugin](claude_security) on a repository. A full scan spawns lots of agents, so I ran out of credits halfway.
 
 Claude Code showed this:

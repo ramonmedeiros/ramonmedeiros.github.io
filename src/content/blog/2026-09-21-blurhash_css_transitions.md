@@ -10,8 +10,6 @@ keywords:
   - frontend
 ---
 
-# BlurHash and CSS transitions for image loading
-
 On [Find a Cocktail][findacocktail] every cocktail has a photo. The list loads fast, the images do not: for a moment the page is a grid of empty grey boxes, and then the pictures pop in one by one.
 
 The usual fix is a thumbnail, but that is one more request per image. [BlurHash][blurhash] avoids it: you encode the image once into a short string, around 30 characters, and send it in the same JSON that already carries the image URL. No extra round trip.

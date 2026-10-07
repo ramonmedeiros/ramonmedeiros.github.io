@@ -2,7 +2,6 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getCollection } from 'astro:content';
 
@@ -17,6 +16,18 @@ function postUrl(id: string): string {
 	const day = parts[2];
 	const slug = parts.slice(3).join('-');
 	return `/${year}/${month}/${day}/${slug}/`;
+}
+
+const postsByYear = posts.reduce<[number, typeof posts][]>((groups, post) => {
+	const year = post.data.date.getUTCFullYear();
+	const last = groups.at(-1);
+	if (last && last[0] === year) last[1].push(post);
+	else groups.push([year, [post]]);
+	return groups;
+}, []);
+
+function shortDate(date: Date): string {
+	return date.toLocaleDateString('en-us', { month: 'short', day: '2-digit', timeZone: 'UTC' });
 }
 
 const keywords = [
@@ -37,27 +48,72 @@ const keywords = [
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} keywords={keywords} />
+		<style>
+			.intro {
+				margin-bottom: 3.5rem;
+			}
+			.intro h1 {
+				margin-bottom: 0.25rem;
+			}
+			.role {
+				margin-bottom: 1.25rem;
+				color: var(--muted);
+			}
+			.intro p:last-child {
+				margin-bottom: 0;
+			}
+			.year {
+				margin: 2.5rem 0 0.5rem;
+			}
+			.posts {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.posts li {
+				display: grid;
+				grid-template-columns: 4.5rem 1fr;
+				gap: 1rem;
+				align-items: baseline;
+				margin: 0;
+				padding: 0.4rem 0;
+			}
+			.posts a {
+				text-decoration: none;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<p>
-				Software Engineer specializing in backend development, automated testing, and cloud
-				infrastructure. Writing about Golang, Python, Kubernetes, AWS, Google Cloud Platform, and
-				practical engineering solutions.
-			</p>
-			<ul style="list-style:none;padding:0">
-				{
-					posts.map((post) => (
-						<li>
-							<a href={postUrl(post.id)}>{post.data.title}</a>
-							<small style="margin-left:0.5em;color:rgb(var(--gray))">
-								<FormattedDate date={post.data.date} />
-							</small>
-						</li>
-					))
-				}
-			</ul>
+			<section class="intro">
+				<h1>Ramon Medeiros</h1>
+				<p class="role">Software Engineer · Stockholm</p>
+				<p>
+					Backend engineer working on agentic AI platforms, payments, distributed systems and the
+					cloud infrastructure underneath them. I write about Golang, Python, Kubernetes, testing
+					and the practical problems I run into. <a href="/about">More about me →</a>
+				</p>
+			</section>
+
+			<h2 class="section-label">Writing</h2>
+			{
+				postsByYear.map(([year, yearPosts]) => (
+					<section>
+						<h3 class="year meta">{year}</h3>
+						<ul class="posts">
+							{yearPosts.map((post) => (
+								<li>
+									<time class="meta" datetime={post.data.date.toISOString()}>
+										{shortDate(post.data.date)}
+									</time>
+									<a href={postUrl(post.id)}>{post.data.title}</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				))
+			}
 		</main>
 		<Footer />
 	</body>

@@ -9,27 +9,17 @@ import Header from '../components/Header.astro';
 	<head>
 		<BaseHead title="404 — Page Not Found" description="Page not found" />
 		<style>
-			.container {
-				margin: 10px auto;
-				max-width: 600px;
-				text-align: center;
-			}
-			h1 {
-				margin: 30px 0;
-				font-size: 4em;
-				line-height: 1;
-				letter-spacing: -1px;
+			.code {
+				margin-bottom: 0.5rem;
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<div class="container">
-				<h1>404</h1>
-				<p><strong>Page not found :(</strong></p>
-				<p>The requested page could not be found.</p>
-			</div>
+			<p class="code meta">404</p>
+			<h1>Page not found</h1>
+			<p>The page you're looking for doesn't exist. <a href="/">Back to the writing →</a></p>
 		</main>
 		<Footer />
 	</body>
